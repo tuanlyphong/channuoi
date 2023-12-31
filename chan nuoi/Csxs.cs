@@ -16,5 +16,17 @@ namespace chan_nuoi
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Themcssx a = new Themcssx();
+            a.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Xemcssx b = new Xemcssx();
+            b.Show();
+        }
     }
 }

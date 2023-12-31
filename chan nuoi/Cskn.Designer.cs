@@ -32,7 +32,6 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -69,30 +68,20 @@
             button1.TabIndex = 9;
             button1.Text = "THÊM CƠ SỞ ";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Yellow;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(75, 195);
-            button2.Name = "button2";
-            button2.Size = new Size(178, 96);
-            button2.TabIndex = 10;
-            button2.Text = "XÓA CƠ SỞ ";
-            button2.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
             button3.BackColor = Color.Yellow;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(75, 297);
+            button3.Location = new Point(75, 195);
             button3.Name = "button3";
             button3.Size = new Size(178, 96);
             button3.TabIndex = 11;
             button3.Text = "XEM CƠ SỞ ";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Cskn
             // 
@@ -101,7 +90,6 @@
             BackColor = Color.FromArgb(41, 173, 178);
             ClientSize = new Size(800, 450);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -117,7 +105,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button button1;
-        private Button button2;
         private Button button3;
     }
 }

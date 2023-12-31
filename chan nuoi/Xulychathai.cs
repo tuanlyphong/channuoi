@@ -26,6 +26,7 @@ namespace chan_nuoi
         private void button2_Click(object sender, EventArgs e)
         {
             Cskn a = new Cskn();
+            a.Show();
         }
     }
 }
