@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace chan_nuoi
 {
-    public partial class Dashboard : Form
+    public partial class Trangchu : Form
     {
-        public Dashboard()
+        public Trangchu()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Xulychathai f = new Xulychathai();
+            f.Show();
         }
     }
 }

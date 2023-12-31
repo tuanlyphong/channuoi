@@ -4,9 +4,9 @@ using System.Data.Common;
 using System.Data.SqlClient;
 namespace chan_nuoi
 {
-    public partial class Form1 : Form
+    public partial class Dangnhap : Form
     {
-        public Form1()
+        public Dangnhap()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace chan_nuoi
             SqlDataReader dr = cmd.ExecuteReader();
                 if(dr.Read())
             {
-                Dashboard d = new Dashboard();
+                Trangchu d = new Trangchu();
                 d.Show();
                 this.Hide();
             }

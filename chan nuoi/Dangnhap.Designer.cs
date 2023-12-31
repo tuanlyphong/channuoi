@@ -1,6 +1,6 @@
 ﻿namespace chan_nuoi
 {
-    partial class Form1
+    partial class Dangnhap
     {
         /// <summary>
         ///  Required designer variable.
@@ -54,7 +54,6 @@
             label1.Size = new Size(97, 25);
             label1.TabIndex = 1;
             label1.Text = "username:";
-          
             // 
             // label2
             // 
@@ -80,7 +79,7 @@
             textBox2.Size = new Size(172, 32);
             textBox2.TabIndex = 4;
             // 
-            // Form1
+            // Dangnhap
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -94,9 +93,8 @@
             Font = new Font("Impact", 12F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form1";
-            Text = "Form1";
-       
+            Name = "Dangnhap";
+            Text = "Đăng nhập";
             ResumeLayout(false);
             PerformLayout();
         }
