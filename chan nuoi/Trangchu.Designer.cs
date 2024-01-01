@@ -82,6 +82,7 @@
             button4.TabIndex = 5;
             button4.Text = "Cơ sở chăn nuôi";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button1
             // 

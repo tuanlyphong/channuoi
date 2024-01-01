@@ -22,5 +22,11 @@ namespace chan_nuoi
             Xulychathai f = new Xulychathai();
             f.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Cosochannuoi c = new Cosochannuoi();
+            c.Show();
+        }
     }
 }

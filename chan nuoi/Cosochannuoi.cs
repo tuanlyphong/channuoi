@@ -16,5 +16,11 @@ namespace chan_nuoi
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tochuccanhan f = new Tochuccanhan();
+            f.Show();
+        }
     }
 }
