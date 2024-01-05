@@ -10,33 +10,35 @@ using System.Windows.Forms;
 
 namespace chan_nuoi
 {
-    public partial class Cosochannuoi : Form
+    public partial class Khac : Form
     {
-        public Cosochannuoi()
+        public Khac()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Tochuccanhan f = new Tochuccanhan();
-            f.Show();
-            Dieukien b = new Dieukien();
-            b.Show();
-            Giaychungnhan c = new Giaychungnhan();
-            c.Show();
+            Chicucthuy a = new Chicucthuy();
+            a.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            Cscb s = new Cscb();
-            s.Show();
+            Banthuoc b = new Banthuoc();
+            b.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Atdb x = new Atdb();
-            x.Show();   
+            Tieuhuy t = new Tieuhuy();
+            t.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Gietmo g = new Gietmo();
+            g.Show();
         }
     }
 }

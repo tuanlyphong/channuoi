@@ -261,5 +261,16 @@ namespace chan_nuoi
                 MessageBox.Show("Vui lòng chọn một tổ chức và một cá nhân để xóa.");
             }
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Honhole z = new Honhole();
+            z.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

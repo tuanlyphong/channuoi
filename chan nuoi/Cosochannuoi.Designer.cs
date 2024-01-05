@@ -83,6 +83,7 @@
             button2.TabIndex = 8;
             button2.Text = "Cơ sở chế biến";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -95,6 +96,7 @@
             button3.TabIndex = 9;
             button3.Text = "Vùng an toàn dịch bệnh";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Cosochannuoi
             // 

@@ -1,0 +1,94 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace chan_nuoi
+{
+    public partial class Themthongke : Form
+    {
+        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true ");
+        public Themthongke()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validate input data
+                if (!int.TryParse(textBox1.Text, out int IDThongKe) || IDThongKe < 0)
+                {
+                    MessageBox.Show("ID thống kê không hợp lệ.");
+                    return;
+                }
+
+                if (!int.TryParse(textBox2.Text, out int IDHo) || IDHo < 0)
+                {
+                    MessageBox.Show("ID hộ không hợp lệ.");
+                    return;
+                }
+
+                if (!int.TryParse(textBox3.Text, out int soLuongBo) || soLuongBo < 0)
+                {
+                    MessageBox.Show("Số lượng bò không hợp lệ.");
+                    return;
+                }
+
+                if (!int.TryParse(textBox4.Text, out int soLuongDe) || soLuongDe < 0)
+                {
+                    MessageBox.Show("Số lượng dê không hợp lệ.");
+                    return;
+                }
+
+                // Open the connection
+                con.Open();
+
+                // Create a SQL command
+                string sqlCommandText = "INSERT INTO ThongKe (IDThongKe, IDHo, NgayThongKe, SoLuongBo, SoLuongDe) " +
+                                        "VALUES (@IDThongKe, @IDHo, @NgayThongKe, @SoLuongBo, @SoLuongDe)";
+                using (SqlCommand sqlCommand = new SqlCommand(sqlCommandText, con))
+                {
+                    // Add parameters
+                    sqlCommand.Parameters.AddWithValue("@IDThongKe", IDThongKe);
+                    sqlCommand.Parameters.AddWithValue("@IDHo", IDHo);
+                    sqlCommand.Parameters.AddWithValue("@NgayThongKe", dateTimePicker1.Value);
+                    sqlCommand.Parameters.AddWithValue("@SoLuongBo", soLuongBo);
+                    sqlCommand.Parameters.AddWithValue("@SoLuongDe", soLuongDe);
+
+                    // Execute the command
+                    sqlCommand.ExecuteNonQuery();
+                }
+
+                // Display success message
+                MessageBox.Show("Thêm thông tin thành công.");
+
+                // Clear the textboxes
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
+                dateTimePicker1.Value = DateTime.Now;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                // Close the connection
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+    }
+}

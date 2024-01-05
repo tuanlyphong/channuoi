@@ -28,5 +28,11 @@ namespace chan_nuoi
             Cosochannuoi c = new Cosochannuoi();
             c.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Khac z = new Khac();
+            z.Show();   
+        }
     }
 }
