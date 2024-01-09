@@ -17,7 +17,7 @@ namespace chan_nuoi
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true ");
+        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient ");
         private void button1_Click(object sender, EventArgs e)
         {
             string tinh = textBox1.Text;

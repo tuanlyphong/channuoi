@@ -13,7 +13,7 @@ namespace chan_nuoi
 {
     public partial class Dieukien : Form
     {
-        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true ");
+        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient ");
         public Dieukien()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace chan_nuoi
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true "))
+                using (SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "))
                 {
                     con.Open();
 
@@ -61,7 +61,7 @@ namespace chan_nuoi
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true "))
+                using (SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "))
                 {
                     con.Open();
 

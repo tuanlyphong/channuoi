@@ -13,7 +13,7 @@ namespace chan_nuoi
 {
     public partial class Themtochuc : Form
     {
-        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true ");
+        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient ");
         public Themtochuc()
         {
             InitializeComponent();

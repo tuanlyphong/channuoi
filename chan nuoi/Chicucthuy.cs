@@ -13,7 +13,7 @@ namespace chan_nuoi
 {
     public partial class Chicucthuy : Form
     {
-        private readonly string connectionString = "Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true "; // Replace with your actual connection string
+        private readonly string connectionString = "Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "; // Replace with your actual connection string
 
         public Chicucthuy()
         {
