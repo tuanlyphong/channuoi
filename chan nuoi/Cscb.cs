@@ -14,7 +14,7 @@ namespace chan_nuoi
 
     public partial class Cscb : Form
     {
-        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient ");
+        SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;");
         public Cscb()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace chan_nuoi
         }
         private void SearchCosoCB(string searchText)
         {
-            using (SqlConnection connection = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "))
+            using (SqlConnection connection = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;"))
             {
                 connection.Open();
 
@@ -65,7 +65,7 @@ namespace chan_nuoi
                 int selectedIndex = dataGridView1.SelectedRows[0].Index;
                 int idCosoToDelete = (int)dataGridView1.Rows[selectedIndex].Cells["IDCoso"].Value;
 
-                using (SqlConnection connection = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "))
+                using (SqlConnection connection = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;"))
                 {
                     connection.Open();
 

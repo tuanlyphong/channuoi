@@ -20,7 +20,7 @@ namespace chan_nuoi
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient ");
+        SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;");
         private void Xemcssx_Load(object sender, EventArgs e)
         {
             con.Open();

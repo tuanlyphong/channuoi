@@ -17,7 +17,7 @@ namespace chan_nuoi
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient ");
+        SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;");
         private void button1_Click(object sender, EventArgs e)
         {
             if (int.TryParse(textBox1.Text, out int IDtochuc) && !string.IsNullOrEmpty(textBox2.Text))
@@ -63,7 +63,7 @@ namespace chan_nuoi
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "))
+                using (SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;"))
                 {
                     con.Open();
 

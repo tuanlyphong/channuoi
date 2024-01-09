@@ -23,12 +23,12 @@ namespace chan_nuoi
             Themtochuc f = new Themtochuc();
             f.Show();
         }
-        SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient ");
+        SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;");
         private void Xemtochuc()
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "))
+                using (SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;"))
                 {
                     con.Open();
 
@@ -163,7 +163,7 @@ namespace chan_nuoi
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data source=NTRLORD; Initial Catalog=channuoi; Integrated Security=true;providerName=System.Data.SqlClient "))
+                using (SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;"))
                 {
                     con.Open();
 
