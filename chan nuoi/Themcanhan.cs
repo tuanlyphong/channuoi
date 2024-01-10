@@ -14,7 +14,7 @@ namespace chan_nuoi
 
     public partial class Themcanhan : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;;providerName=System.Data.SqlClient");
+        SqlConnection con = new SqlConnection("Data Source=NTRLORD; Initial Catalog=channuoi; Integrated Security=True;");
         public Themcanhan()
         {
             InitializeComponent();
